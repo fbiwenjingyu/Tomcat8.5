@@ -767,6 +767,8 @@ public class ContextConfig implements LifecycleListener {
         }
 
         webConfig();
+        
+        context.addServletContainerInitializer(new JasperInitializer(),null);
 
         if (!context.getIgnoreAnnotations()) {
             applicationAnnotationsConfig();
